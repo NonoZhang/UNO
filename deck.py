@@ -5,16 +5,17 @@ from cards import *
 import copy
 import random
 
+
 class Deck(object):
     def __init__(self, deck):
         self.deck = deck
         self.color = ["green", "yellow", "red", "blue"]
         self.letter = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "+2", "+4", "ban", "revers", "change_color"]
 
-    def generateCard(self):
+    def generate_card(self):
         for color in self.color:
             for letter in self.letter:
-                cards = Card(color, letter)
+                cards = Card(letter, color)
                 self.deck.append(cards)
                 self.deck.append(copy.deepcopy(cards))
                 # print cards.color, cards.propertyLetter
