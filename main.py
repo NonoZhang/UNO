@@ -26,7 +26,7 @@ if __name__ == '__main__':
         for i in range(0, players_number):
             # print players[i].name
             players[i].find_card(deck)
-            print len(deck.deck)
+            # print len(deck.deck)
             if len(players[i].cards) == 0:
                 print "is over "
                 flag = False
